@@ -1,0 +1,21 @@
+1.openidLogin(): 用于基于OpenId的验证
+2.header():将安全表头添加到响应
+3.cors():配置跨域资源共享（CORS）
+4.sessionManagement():允许配置会话管理
+5.portMapper():允许配置一个PortMapper(getShardObject(class)),其他提供SecurityConfigurer的对象使用PortMapper从HTTP重定向到HTTPS或者从HTTPS到HTTP。默认情况下，springSecurity使用一个PortMapper映射HTTP端口8080到HTTPS8443，HTTP端口80到HTTPS端口443
+6.jee():配置基于容器的预认证，在这种情况下，认证由Servlet容器管理
+7.x509():配置基于x509的认证
+8.rememberMe():允许配置"记住我"的验证
+9.authorizeRequests():允许基于使用HttpServletRequest限制访问
+10.requestCache():允许配置请求缓存
+11.exceptionHandling():允许配置错误处理
+12.securityContext():在HttpServletRequests之间的SecurityContextHolder上设置SecurityContext的管理。当使用WebSecurityConfigurerAdapter时，这将自动应用
+13.servletApi():将HttpServletRequest方法与在其上找到的指集成到SecurityContext中，当使用WebSecurityConfigurerAdapter时，这将自动应用
+14.csrf():添加CSRF支持，当使用WebSecurityConfigurerAdapter时，这将自动应用
+15.logout():添加退出登录支持，当使用WebSecurityConfigurerAdapter时，这将自动应用。默认情况是，访问URL "/logout"，当HTTP Session 无效来清除用户，清除已经配置的任何 #remeberMe()身份验证，清除SecurityContextHolder 然后重定向到"/logout?success"
+16.anonymous：允许配置匿名用户的访问方法，当和WebSecurityConfigurerAdapter结合使用的时候，这将自动应用，默认情况下，匿名用户将使用"org.springframework.security.authentication.AnonymousAuthenticationToken"，默认角色是“ROLE_ANONYMOUS”
+17.formLogin():指定支持基于表单的身份验证，如果未指定FormLoginConfigurer#loginPage(String)，将生成默认的登录页面
+18.oauth2Login():根据外部OAuth2.0或者OpenID connect 1.0 提供程序的身份验证
+19.requiresChannel():配置通道安全。为了使该配置游泳，必须提供至少一个到所需信道的映射
+20.httpBasic():配置Http Basic 验证
+21.addFilterAt():在指定的Filter类的位置添加过滤器
